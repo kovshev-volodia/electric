@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Электрик круглосуточно</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+        }
+
+        body {
+            background-color: #0b0e14;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            line-height: 1.5;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            padding: 0 24px;
+        }
+
+        /* header */
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 48px 0 32px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .logo {
+            font-size: 2.6rem;
+            font-weight: 800;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #f5c542;
+            margin-bottom: 12px;
+            text-shadow: 0 0 20px rgba(245, 197, 66, 0.25);
+        }
+
+        .subhead {
+            font-size: 1.2rem;
+            color: #b0b8c4;
+            font-weight: 400;
+            max-width: 600px;
+        }
+
+        /* services grid */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 28px;
+            padding: 56px 0 48px;
+        }
+
+        .service-card {
+            background: #141a23;
+            border-radius: 20px;
+            padding: 32px 20px;
+            text-align: center;
+            border: 1px solid #1e2836;
+            transition: transform 0.2s, border-color 0.2s;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            border-color: #f5c542;
+        }
+
+        .service-icon {
+            font-size: 2.4rem;
+            display: block;
+            margin-bottom: 16px;
+        }
+
+        .service-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #ffffff;
+            letter-spacing: 0.3px;
+            line-height: 1.4;
+        }
+
+        .badge {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 0.8rem;
+            background: #f5c54220;
+            color: #f5c542;
+            padding: 4px 12px;
+            border-radius: 30px;
+            font-weight: 500;
+            border: 1px solid #f5c54240;
+        }
+
+        /* info panel */
+        .info-panel {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px 80px;
+            padding: 48px 32px;
+            background: #0f141c;
+            border-radius: 32px;
+            border: 1px solid #1e2836;
+            margin: 16px 0 40px;
+        }
+
+        .info-item {
+            text-align: center;
+        }
+
+        .info-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #8a94a6;
+            margin-bottom: 6px;
+        }
+
+        .info-value {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #f5c542;
+            white-space: nowrap;
+        }
+
+        .info-value.phone {
+            color: #ffffff;
+            font-size: 2rem;
+            letter-spacing: 1px;
+        }
+
+        .info-value.phone a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .info-value.phone a:hover {
+            color: #f5c542;
+        }
+
+        /* footer */
+        .footer {
+            text-align: center;
+            padding: 32px 0 24px;
+            border-top: 1px solid #1e2836;
+            color: #5e6a7a;
+            font-size: 0.85rem;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        .footer a {
+            color: #8a94a6;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: #f5c542;
+        }
+
+        /* mobile */
+        @media (max-width: 600px) {
+            .logo {
+                font-size: 1.9rem;
+                letter-spacing: 2px;
+            }
+
+            .subhead {
+                font-size: 1rem;
+            }
+
+            .services {
+                grid-template-columns: 1fr 1fr;
+                gap: 16px;
+                padding: 32px 0;
+            }
+
+            .service-card {
+                padding: 22px 12px;
+            }
+
+            .service-icon {
+                font-size: 1.8rem;
+                margin-bottom: 10px;
+            }
+
+            .service-title {
+                font-size: 0.95rem;
+            }
+
+            .info-panel {
+                flex-direction: column;
+                gap: 24px;
+                padding: 32px 20px;
+                border-radius: 24px;
+            }
+
+            .info-value.phone {
+                font-size: 1.5rem;
+            }
+
+            .info-value {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .services {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Шапка -->
+        <header class="header">
+            <div class="logo">ЭЛЕКТРИК</div>
+            <div class="subhead">Все виды электромонтажных работ</div>
+        </header>
+
+                <!-- Информация -->
+        <div class="info-panel">
+            <div class="info-item">
+                <div class="info-label">Город</div>
+                <div class="info-value">Кемерово и пригород</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">Режим работы</div>
+                <div class="info-value">Круглосуточно</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">Телефон</div>
+                <div class="info-value phone"><a href="tel:89049648152">8-904-964-81-52</a></div>
+            </div>
+        </div>
+
+        <!-- Сетка услуг -->
+        <section class="services">
+            <div class="service-card">
+                <span class="service-icon">🔌</span>
+                <div class="service-title">Установка розеток, выключателей</div>
+            </div>
+            <div class="service-card">
+                <span class="service-icon">⚡</span>
+                <div class="service-title">Замена, прокладка провода</div>
+            </div>
+            <div class="service-card">
+                <span class="service-icon">🔥</span>
+                <div class="service-title">Монтаж теплого пола</div>
+            </div>
+            <div class="service-card">
+                <span class="service-icon">🚨</span>
+                <div class="service-title">Аварийный выезд электрика</div>
+                <div class="badge">24/7</div>
+            </div>
+        </section>
+
+        <!-- Подвал -->
+        <footer class="footer">
+            <p>Электрик круглосуточно · Кемерово и пригород · Аварийный выезд 24/7</p>
+            <p style="margin-top: 8px; opacity: 0.5;">Разработка сайта: Дмитрий Абрамов</p>
+        </footer>
+    </div>
+
+</body>
+</html>
