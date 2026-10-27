@@ -117,6 +117,56 @@
             border: 1px solid #f5c54240;
         }
 
+                /* Блок с одним фото */
+        .photo-block {
+            padding: 8px 0 40px;
+        }
+
+        .photo-frame {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            border: 1px solid #1e2836;
+            background: #141a23;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+        }
+
+        .photo-frame img {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-height: 460px;
+            object-fit: cover;
+        }
+
+        .photo-caption {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 16px 22px;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+        }
+
+        @media (max-width: 600px) {
+            .photo-frame {
+                border-radius: 16px;
+            }
+
+            .photo-frame img {
+                max-height: 280px;
+            }
+
+            .photo-caption {
+                padding: 12px 16px;
+                font-size: 0.9rem;
+            }
+        }
+        
         /* info panel */
         .info-panel {
             display: flex;
@@ -261,6 +311,14 @@
                 <div class="info-value phone"><a href="tel:89049648152">8-904-964-81-52</a></div>
             </div>
         </div>
+
+        <!-- Блок с одним фото -->
+        <section class="photo-block">
+            <div class="photo-frame">
+                <img src="IMG_20261027_102546.jpg"
+                    loading="lazy">
+            </div>
+        </section>
 
         <!-- Сетка услуг -->
         <section class="services">
